@@ -7,6 +7,7 @@
     can cancel the mission. If GM feels security can be assured by delaying the mission
     the transporters can be ordered to hold. GM can also cancel the mission if necessary.
 
+<<<<<<< Updated upstream
     ## HOLDING
     After the transporters passes a 'COMMIT' waypoint the GM will have the option to
     hold the aircraft. Doing so will update the same menu option to a command to 
@@ -37,6 +38,11 @@
     the Swallow mission unfolds.
     
 ]]
+=======
+-- TODO
+-- More messages (top dog) -- Needs final approval
+-- Complete isEscortNearby function
+>>>>>>> Stashed changes
 
 local _codeword = "Swallow"
 local _recipient = "FOCUS"
@@ -103,8 +109,6 @@ Swallow = {
             "and review tomorrow at oh eight hundred. [CALLSIGN] out.",
     }
 }
-
--- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\↑///////////////////////////////////////////////
 
 function Swallow:Start(tts)
     if self._is_started then return end
@@ -276,4 +280,4 @@ Swallow._start_menu = Swallow._main_menu:AddCommand("Start", function()
     Swallow:Start(TTS_Top_Dog)
 end)
 
-Trace("\\\\\\\\\\ Story :: Swallow.lua was loaded //////////")
+-- Debug("sausage →→ " .. DumpPrettyDeep(Swallow))

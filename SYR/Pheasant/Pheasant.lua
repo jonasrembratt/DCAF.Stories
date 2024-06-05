@@ -1,19 +1,12 @@
 -- //////////////////////////////////////////////////////////////////////////////////
 --                                    PHEASANT
 --                                    ********
--- Syrian Army dispatches a motor convoy with infantry and supplies to reinforce position
--- near _destination. DCAF are tasked with intercepting and disabling the train.
--- Possibility of revealing the location of vehicle maintenance/depot if spotted
--- early enough.
+-- Syrian Army dispatches a freight train with infantry and supplies to reinforce position
+-- near Al Tabqah. Harriers are tasked with intercepting and disabling the train.
 
---- TODO
--- Create function to check if convoy is spotted before deadline, and set flag to reveal
--- location of depot.
---
-
--- ///////////////////////////////////////↓\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
---                                     CONFIG
---                                     ******
+-- TODO
+-- More messages (top dog)'
+-- Complete isEscortNearby function
 
 local _codeword = "Pheasant"
 local _ido = "FOCUS"
@@ -45,8 +38,6 @@ Pheasant = {
             .. "their E T A at " .. _destination .. " is time, plus thirty. [CALLSIGN] out."
     }
 }
-
--- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\↑///////////////////////////////////////////////
 
 function Pheasant:Start(tts)
     if self._is_started then return end
